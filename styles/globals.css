@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bangers&family=Black+Ops+One&family=Bungee+Inline&family=Concert+One&family=Henny+Penny&family=Lobster+Two&family=Luckiest+Guy&family=Poiret+One&family=Reggae+One&family=Tapestry&family=Wallpoet&family=Water+Brush&display=swap');
+
+/* Custom google fonts
+
+font-family: 'Audiowide', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Black Ops One', cursive;
+font-family: 'Bungee Inline', cursive;
+font-family: 'Concert One', cursive;
+font-family: 'Henny Penny', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Reggae One', cursive;
+font-family: 'Tapestry', cursive;
+font-family: 'Wallpoet', cursive;
+font-family: 'Water Brush', cursive; */ 
+ 
+ body {
+    font-size: 0.9375rem;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5;
+    background: #D1D1D1;
+    margin: 0rem;
+ }
+
+ #__next {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100vh;
+ }
+
+.contentContainer {
+   border: 1px solid #2a2a2a;
+   box-shadow: 0 0 5px #b1b1b1;
+   margin-top: 20px;
+   padding: 0 0px 90px;
+   background-color: #c5e1a5;
+   width: 720px;
+   margin: auto;
+   height: 80vh;
+   margin: 20p;
+}
+ .navigation {
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .navigation a {
+    float: left;
+    color: gray;
+    text-align: center;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+    font-size: 1.0625rem;
+ }
+
+ .navigation a:hover {
+    background-color: #ddd;
+    color: black;
+ }
+
+ .navigation a.active {
+    background-color: #04AA6D;
+    color: white;
+ }
+
+ .children {
+
+    height: 48.75rem;
+    overflow: hidden;
+    position: relative;
+ }
+
+ .movie_inner_container {
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.25rem 0rem;
+ }
+
+ .movie_outer_container {
+    overflow: auto;
+    height: 44.6875rem;
+    box-shadow: inset 0rem -1.25rem 0.9375rem -1.3125rem #02020257;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+ }
+
+ .movie_outer_container::-webkit-scrollbar {
+   display: none;
+ }
+
+ .card {
+   width: 9.625rem;
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   box-shadow: 0rem 0rem 0.1875rem grey;
+   margin: 0.625rem;
+   border-radius: 0.3125rem;
+   transition: 1s;
+   transform: scale(1);
+   background-color: white;
+   font-family: system-ui, cursive;
+ }
+ .card:hover {
+   transform: scale(1.1);
+   transition: .2s;
+   z-index: 1;
+   background-color: rgb(216, 223, 152);
+ }
+
+ .card p {
+    font-size: small;
+    margin: 0px;
+    }
+
+ .card span {
+   min-height:12.1875rem !important;
+   margin: 0.3125rem !important;
+   position: relative;
+   display: flex;
+   border-radius: 0.3125rem;
+ }
+
+ .page_banner {
+    box-shadow: 0rem 0.5rem 0.3125rem 0.125rem #0000004a;
+    padding: 0.625rem;
+    background-color: #8bc34a;
+    margin: 0;
+    text-indent: 0.625rem;
+    color: white;
+    font-family: 'Audiowide', cursive;
+    text-shadow: 2px 2px 3px black;
+    cursor: context-menu;
+ }
+
+ .inner_container {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 0.3125rem;
+ }
+
+ .inner_container h4 {
+   margin: 0rem;
+ }
+
+
+ .preview_movie_outer_container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-size: cover;
+   height: inherit;
+ }
+ .movie_preview {
+   display: flex;
+   flex-direction: row;
+   align-content: center;
+   flex-wrap: wrap;
+   width: -webkit-fill-available;
+   padding: 0rem 0.625rem;
+   height: inherit;
+   justify-content: space-between;
+   background: #ff8008; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff8008c7, #ffc837db); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff8008c7, #ffc837db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+
+ .movie_preview span {
+   border-radius: 0.625rem;
+ }
+
+ .preview_movie_outer_container h1{
+   position: absolute;
+   font-family: 'Reggae One', cursive;
+   color: #ffeb3b;
+    text-shadow: 0.1875rem 0.1875rem #00000073;
+    text-align: center;
+    width: 95%;
+ }
+
+ .header_img {
+    width: 48%;
+ }
+
+ .description {
+   display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+   
+ }
+
+ .description p {
+   margin: 0;
+ }
+
+ .about_text {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   width: 90%;
+   margin: 30px auto;
+   flex-direction: column;
+ }
+
+ .about_text p {
+   font-family: system-ui, cursive;
+   font-size: x-large;
+ }
