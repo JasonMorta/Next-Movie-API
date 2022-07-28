@@ -4,7 +4,7 @@ import '../styles/globals.css'
 //This css import will only work inside this file.
 
 
-//"Components": is the current page thats being displayed(any page inside  teh pages folder)
+//"Component": is the current page thats being displayed(any page inside  teh pages folder)
 //"pageProps" : is the initial props thats being send down to the current page.
 
  function MyApp({ Component, pageProps }) {
