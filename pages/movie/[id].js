@@ -80,9 +80,7 @@ function Movie({results}) {
                <p><b>Runtime:</b> {convertMsToTime(`${results.runtime}00000`)}</p>
    
           
-              
-           </div>
-           <div className='iframe'>
+               <div className='iframe'>
                   <iframe
                  
                   width="100%" 
@@ -91,6 +89,8 @@ function Movie({results}) {
       
                   </iframe>
                </div>
+           </div>
+         
        </div>
          </div>
       </div>
