@@ -45,11 +45,11 @@ function convertMsToTime(milliseconds) {
 
 //Render the movie details when selected
 function Movie({results}) {
-   //console.log(results)
+   console.log(results)
 
    return <GlobalLayout>
       <div className='preview_movie_outer_container' style={{ backgroundImage: `url(${img_url+size+results.backdrop_path})` }}>
-      <h1>{results.original_title }</h1>
+      <h1>{results.title }</h1>
          <div className='movie_preview' >
         
        <div className='inner-container'>
@@ -87,7 +87,7 @@ function Movie({results}) {
                  
                   width="100%" 
                   height="100%" 
-                  src={embed+results.videos.results[0].key} >
+                  src={embed+results.videos.results[1].key} >
       
                   </iframe>
                </div>

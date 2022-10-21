@@ -250,9 +250,11 @@ font-family: 'Water Brush', cursive; */
 
 
  .iframe {
-   width: 320px;
+   max-width: 400px;
+   min-width: 320px;
    margin: 30px auto;
-   height: 210px;
+   height: 300px;
+   min-height: 210px;
 
  }
  iframe {
