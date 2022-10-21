@@ -30,19 +30,19 @@ font-family: 'Water Brush', cursive; */
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    height: 100vh;
+    /* height: 100vh; */
  }
 
 .contentContainer {
    border: 1px solid #2a2a2a;
    box-shadow: 0 0 5px #b1b1b1;
    margin-top: 20px;
-   padding: 0 0px 90px;
+   /* padding: 0 0px 90px; */
    background-color: #c5e1a5;
    width: 720px;
-   margin: auto;
-   height: 80vh;
-   margin: 20p;
+   /* height: 80vh; */
+   margin: 20px;
+   overflow: hidden;
 }
  .navigation {
     overflow: hidden;
@@ -99,7 +99,7 @@ font-family: 'Water Brush', cursive; */
  }
 
  .card {
-   width: 9.625rem;
+   width: 13.625rem;
    cursor: pointer;
    display: flex;
    flex-direction: column;
@@ -162,7 +162,23 @@ font-family: 'Water Brush', cursive; */
    align-items: center;
    background-size: cover;
    height: inherit;
+   overflow: scroll;
+   background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
  }
+/* Hide scrollbar for Chrome, Safari and Opera */
+ .preview_movie_outer_container::-webkit-scrollbar {
+   display: none;
+ }
+
+ /* Hide scrollbar for IE, Edge and Firefox */
+ .preview_movie_outer_container {
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+ }
+
+
  .movie_preview {
    display: flex;
    flex-direction: row;
@@ -170,11 +186,14 @@ font-family: 'Water Brush', cursive; */
    flex-wrap: wrap;
    width: -webkit-fill-available;
    padding: 0rem 0.625rem;
-   height: inherit;
-   justify-content: space-between;
+   justify-content: center;
    background: #ff8008; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ff8008c7, #ffc837db); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ff8008c7, #ffc837db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+
+ .inner-container{
+   margin: 35px 0px 20px;
  }
 
  .movie_preview span {
@@ -188,17 +207,26 @@ font-family: 'Water Brush', cursive; */
     text-shadow: 0.1875rem 0.1875rem #00000073;
     text-align: center;
     width: 95%;
+    z-index: 2;
+    top: -28px;
  }
 
  .header_img {
-    width: 48%;
+   max-width: 400px;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   z-index: 0;
  }
+
 
  .description {
    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 50%;
+   flex-direction: column;
+   flex-wrap: wrap;
+   width: 90%;
+   margin: auto;
+   align-items: center;
    
  }
 
@@ -218,4 +246,16 @@ font-family: 'Water Brush', cursive; */
  .about_text p {
    font-family: system-ui, cursive;
    font-size: x-large;
+ }
+
+
+ .iframe {
+   width: 320px;
+   margin: 30px auto;
+   height: 210px;
+
+ }
+ iframe {
+   border: 0;
+   box-shadow: 0 0 5px black;
  }

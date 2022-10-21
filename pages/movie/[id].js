@@ -1,7 +1,7 @@
 import GlobalLayout from '../../components/GlobalLayout'
 import Image from 'next/image'
 
-// The [id].js will generate the content of any movie selected.
+// The [id].js will generate the content of any  selected movie.
 
 //Store the movie sting into variables
 let baseURL     = "https://api.themoviedb.org/3/movie/";
@@ -9,6 +9,7 @@ let lang        = "&language=en-US";
 let API_KEY     = "?api_key=8cf1ee88fcff08cac4702a53ce7bc470";
 let size        = "original";
 let img_url     = "https://image.tmdb.org/t/p/"
+let embed       = `https://www.youtube.com/embed/`
 
 //Use this array to replay the month integer wit a string
 const month = [null,"January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -17,6 +18,18 @@ const month = [null,"January","February","March","April","May","June","July","Au
 function padTo2Digits(num) {
    return num.toString().padStart(2, '0');
 }
+
+const imageStyle={
+   "with": "380",
+   "min-width": "250px",
+   "height": "520",
+}
+
+let nimg ={
+minWidth: "320px",
+maxWidth: "500px !important"
+}
+
 
 function convertMsToTime(milliseconds) {
    let seconds = Math.floor(milliseconds / 1000);
@@ -39,30 +52,46 @@ function Movie({results}) {
       <h1>{results.original_title }</h1>
          <div className='movie_preview' >
         
-        <div className='header_img'>
-            
-           <Image 
-           src={img_url+size+results.poster_path}
-           width={360}
-           height={500}/>
-        </div>
-        <div className='description'>
-         <h2>{results.tagline ? results.tagline:results.original_title}</h2>
-            <p>{results.overview}</p>
-            <br/>
-            <p><b>Release Date:</b>
-            {` 
-            ${results.release_date.replaceAll("-", " ").split(" ")[2]}
-            ${month[parseInt(results.release_date.replaceAll("-", " ").split(" ")[1])]}
-            ${results.release_date.replaceAll("-", " ").split(" ")[0]}`
-            }
-            </p>
-            <p><b>Status:</b> {results.status}</p>
-            <p><b>Genre:</b> {results.genres.map(item=>`${item.name}, `)} </p>
-            <p><b>Runtime:</b> {convertMsToTime(`${results.runtime}00000`)}</p>
-
-            <a href={results.homepage} target="_blank">Website</a>
-        </div>
+       <div className='inner-container'>
+           <div className='header_img'>
+              <Image 
+              data-set={nimg}
+              className='preview-image'
+              src={img_url+size+results.poster_path}
+              style={imageStyle}
+              width={imageStyle.with}
+              height={imageStyle.height}/>
+           </div>
+   
+   
+           <div className='description'>
+            <h2>{results.tagline ? results.tagline:results.original_title}</h2>
+               <p>{results.overview}</p>
+               <br/>
+               <p><b>Release Date:</b>
+               {` 
+               ${results.release_date.replaceAll("-", " ").split(" ")[2]}
+               ${month[parseInt(results.release_date.replaceAll("-", " ").split(" ")[1])]}
+               ${results.release_date.replaceAll("-", " ").split(" ")[0]}`
+               }
+               </p>
+               <p><b>Status:</b> {results.status}</p>
+               <p><b>Genre:</b> {results.genres.map(item=>`${item.name}, `)} </p>
+               <p><b>Runtime:</b> {convertMsToTime(`${results.runtime}00000`)}</p>
+   
+          
+              
+           </div>
+           <div className='iframe'>
+                  <iframe
+                 
+                  width="100%" 
+                  height="100%" 
+                  src={embed+results.videos.results[0].key} >
+      
+                  </iframe>
+               </div>
+       </div>
          </div>
       </div>
          
