@@ -45,7 +45,7 @@ function convertMsToTime(milliseconds) {
 
 //Render the movie details when selected
 function Movie({results}) {
-   console.log(results)
+   //console.log(results)
 
    return <GlobalLayout>
       <div className='preview_movie_outer_container' style={{ backgroundImage: `url(${img_url+size+results.backdrop_path})` }}>
