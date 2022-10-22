@@ -25,10 +25,7 @@ const imageStyle={
    "height": "520",
 }
 
-let nimg ={
-minWidth: "320px",
-maxWidth: "500px !important"
-}
+
 
 
 function convertMsToTime(milliseconds) {
@@ -55,7 +52,6 @@ function Movie({results}) {
        <div className='inner-container'>
            <div className='header_img'>
               <Image 
-              data-set={nimg}
               className='preview-image'
               src={img_url+size+results.poster_path}
               style={imageStyle}
@@ -85,7 +81,7 @@ function Movie({results}) {
                  
                   width="100%" 
                   height="100%" 
-                  src={embed+results.videos.results[1].key} >
+                  src={embed+results.videos.results[0].key} >
       
                   </iframe>
                </div>
