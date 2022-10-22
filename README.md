@@ -5,6 +5,7 @@
 ### Displaying popular movies from the themoviedb.org API
 
 - Install as followed
+- Live version: [https://popularmoviesapi.netlify.app/]
 
 ```bash
   cd to main folder directory
